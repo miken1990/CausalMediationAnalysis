@@ -56,7 +56,7 @@ def get_layer_neurons_topk_dict(df: DataFrame, top_k=5) -> Dict[int, List]:
     for ind, neuron_loc in df[:top_k]["neuron_"].iteritems():
         print(neuron_loc)
         layer_str, neuron_str = neuron_loc.split('-')
-        layer_neurons_dict[int(layer_str)].append(int(neuron_str))
+        layer_neurons_dict[int(layer_str) - 1].append(int(neuron_str))
 
     return layer_neurons_dict
 
