@@ -84,6 +84,8 @@ def main(
     register_hooks(model, layer_neuron_dict)
     output_after_hook = model(input_sentence)
 
+    x = 1
+
 
 if __name__ == '__main__':
     csv_path = "results/newest_intervention/distilgpt2_neuron_effects.csv"
